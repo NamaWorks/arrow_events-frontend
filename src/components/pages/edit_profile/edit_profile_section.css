@@ -1,0 +1,30 @@
+#edit-profile-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+#change-pfp-div{
+  background-color: var(--aev_purple);
+}
+
+#change-pfp-div label {
+  cursor: pointer;
+
+}
+
+#change-pfp-input {
+  display: none;
+}
+
+#change-username-div { 
+  background-color: var(--aev_yellow);
+}
+
+#change-password-div {
+  background-color: var(--aev_orange);
+}
+
+#deactivate-acc-btn {
+  background-color: var(--aev_red);
+}

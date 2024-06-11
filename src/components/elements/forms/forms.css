@@ -1,0 +1,106 @@
+.form-title {
+  text-align: end;
+  align-self: flex-end;
+  font-weight: var(--font_weight_m);
+  position: relative;
+  bottom: var(--text_form_bottom);
+}
+ 
+.form-element {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden ;
+  width: 100%;
+}
+
+.form-div {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: left;
+  min-height: var(--min_height_sections_forms);
+  padding: 0 0 0 var(--sections_divs_padding_left);
+}
+
+.form-div label {
+  display:flex;
+  justify-content: center;
+  line-height: var(--line_height_sections_forms);
+  /* display: none; */
+}
+
+
+
+.form-div label, .form-title{
+  font-size: var(--font_size_xl);
+  /* font-size: 30px; */
+}
+
+.form-div ::placeholder{
+  opacity: .5;
+  color: var(--aev_darkgrey);
+  font-weight: var(--font_weight_xs);
+}
+
+.form-div input {
+  background-color: transparent;
+  font-size: var(--font_size_xl);
+  font-weight: var(--font_weight_xs);
+  color: var(--aev_darkgrey);
+  /* text-transform: uppercase; */
+  /* line-height: var(--line_height_sections_forms); */
+  border: none;
+  padding: 0 0 0 var(--sections_divs_padding_left);
+  overflow: hidden;
+  position: relative;
+  bottom: var(--text_form_bottom);
+}
+
+.form-div input:focus {
+  outline: none;
+}
+
+.submit-btn {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  border:none;
+  font-family: var(--font_fam);
+  font-size: var(--font_size_xl);
+  text-transform: uppercase;
+  align-self: flex-end;
+  min-height: var(--min_height_sections_forms);
+  overflow: hidden;
+  width: 100%;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.submit-btn p {
+  line-height: calc(var(--line_height_sections_forms) + 0.1);
+}
+
+@media (max-width:1200px) {
+  
+  .submit-btn {
+    font-size: var(--font_size_xl_mob);
+  }  
+
+  .form-div ::placeholder, .form-div input{
+    font-size: 14px;
+    bottom: 0px;
+  }
+
+  .form-div label, .form-title{
+    font-size: var(--font_size_xl_mob);
+  }
+}
+
+@media (max-width:600px) {
+  .form-div {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+}

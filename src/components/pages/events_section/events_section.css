@@ -1,0 +1,140 @@
+#app {
+  background-color: transparent;
+}
+
+#events-section {
+  display: none;
+}
+
+article {
+  /* max-width: 40%; */
+  padding: 0 var(--sections_divs_padding_left) ;
+  border-bottom: var(--borders_underline);
+}
+
+.event h4 {
+  text-transform: uppercase;
+  font-size: var(--font_weight_m);
+}
+.event-title {
+  text-transform: none;
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: var(--font_size_xl);
+  /* font-size: var(--font_size_l); */
+  font-weight: var(--font_weight_m);
+  /* margin: 0  0 var(--event_margins) ; */
+}
+
+/* .event-title .position-start {
+  position: relative;
+  right: 00px;
+}
+
+.event-title .position-end {
+  position: relative;
+  right: -100px;
+} */
+
+.event .event-info {
+  display: flex;
+  flex-direction: column;
+  height: 0px;
+  /* margin: var(--event_margins) 0 0 0; */
+  transition: var(--main_transition);
+}
+.event-seen .event-info {
+  display: flex;
+  flex-direction: column;
+  /* margin: var(--event_margins) 0 0 0; */
+  transition: var(--main_transition);
+}
+
+.attendants-title {
+  margin: var(--event_margins) 0 0;
+  display: flex;
+  gap: 0.75rem;
+  border-bottom: var(--borders_underline)
+}
+
+.attendants-title .icon-div {
+  width: 0.8rem;
+  /* rotate: 90deg; */
+  position: relative;
+  bottom: 1px;
+}
+
+.attendants-list {
+  overflow: scroll;
+  transition: var(--main_transition) ;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  transition: var(--main_transition);
+  margin-left: 10%;
+  margin-bottom: var(--event_margins);
+  overflow: hidden;
+}
+
+.attendants-list li {
+  border-bottom: var(--borders_underline)
+}
+
+
+.icon-div{
+  cursor: pointer;
+  /* width: 1rem; */
+}
+.event{
+  /* height: 10svh; */
+  display: flex;
+  flex-direction: column;
+  gap: var(--sections_divs_padding_left);
+  overflow: hidden;
+  transition: var(--main_transition);
+}
+
+#brand-id {
+  margin-top: 20svh;
+}
+
+article.yellow {
+  background-color: var(--aev_yellow);
+}
+article.orange {
+  background-color: var(--aev_orange);
+}
+article.lightblue {
+  background-color: var(--aev_lightblue);
+}
+article.red {
+  background-color: var(--aev_red);
+}
+article.aquagreen {
+  background-color: var(--aev_aquagreen);
+}
+article.purple {
+  background-color: var(--aev_purple);
+}
+article.white {
+  background-color: var(--aev_white);
+}
+article button {
+  max-width: 50svw;
+  background-color: transparent;
+}
+
+
+@media (max-width:1200px) {
+
+  .event-title {
+    font-size: var(--font_size_xl_mob);
+  }
+
+}
+
+@media (max-width:600px){
+  
+}

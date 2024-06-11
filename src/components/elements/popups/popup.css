@@ -1,0 +1,29 @@
+.popup {
+  display: flex;
+  align-self: center;
+  justify-self: center;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  /* top: 10svh; */
+  left: 10svw;
+  right: 10svw;
+  z-index: 999;
+  width: 100%;
+  max-width: 75svw;
+  padding: 2rem;
+  transition: var(--main_transition);
+}
+
+.popup p {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.green {
+  background-color: var(--aev_aquagreen);
+}
+
+.red {
+background-color: var(--aev_red);
+}

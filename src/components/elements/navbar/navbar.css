@@ -1,0 +1,77 @@
+nav {
+  z-index: 999;
+}
+
+.ul-nav {
+  padding: 5px 10px;
+  justify-content: end;
+  list-style: none;
+  display: flex;
+  gap: 60px;
+  position: fixed;
+  top: 20px;
+  right: 30px;
+  background-color: var(--aev_lightgrey);
+}
+
+.ul-nav button {
+  background-color: #ffffff00;
+  border: none;
+  text-transform: uppercase;
+  font-size: var(--font_size_m);
+  font-weight: var(--font_weight_m);
+}
+
+
+.nav-li {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.nav-li :hover {
+  cursor: pointer;
+}
+
+.color-nav-item {
+  width: var(--square_divs_wh);
+  height: var(--square_divs_wh); 
+  background-color: var(--aev_darkgrey);
+}
+
+ #events-color-square {
+  background-color: var(--aev_darkgrey);
+ }
+
+ #signup-color-square {
+  background-color: var(--aev_purple);
+ }
+
+ #login-color-square {
+  background-color: var(--aev_yellow);
+ }
+
+ #user-color-square {
+  background-color: var(--aev_yellow);
+ }
+
+ #create_event-color-square {
+  background-color: var(--aev_aquagreen);
+ }
+
+ #logout-color-square {
+  background-color: var(--aev_red);
+ }
+
+ @media (max-width:600px) {
+  .ul-nav{
+    display: flex;
+    gap: 15px;
+    /* align-items: center; */
+    /* justify-content: center; */
+    right: 1rem;
+    /* top: 3rem; */
+  }
+ }
+ 

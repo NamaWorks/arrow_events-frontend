@@ -1,0 +1,56 @@
+#create-event-title-div{
+  background-color: var(--aev_midgrey);
+}
+
+#create_event_section {
+  display: flex;
+}
+
+input[type="number"] {
+  -webkit-appearance: textfield;
+     -moz-appearance: textfield;
+          appearance: textfield;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none;
+}
+
+input[type="date"]::-webkit-inner-spin-button,
+input[type="date"]::-webkit-calendar-picker-indicator {
+    display: none;
+    -webkit-appearance: none;
+}
+
+#create-event-name-div {
+  background-color: var(--aev_orange);
+}
+
+#create-event-location-div {
+  background-color: var(--aev_yellow);
+}
+
+#create-event-description-div {
+  background-color: var(--aev_aquagreen);
+}
+
+#create-event-date-div {
+  background-color: var(--aev_lightblue);
+}
+
+#create-event-capacity-div {
+  background-color: var(--aev_purple);
+}
+
+#submit-event-btn {
+  background-color: var(--aev_white);
+}
+
+.icon_div {
+  width: var(--icon_div_width);
+  display: flex;
+  align-self: center;
+  position: relative;
+  top: var(--icon_div_position_top);
+}

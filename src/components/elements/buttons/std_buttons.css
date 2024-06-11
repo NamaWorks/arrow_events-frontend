@@ -1,0 +1,42 @@
+.std-btn {
+  display: flex;
+  align-items: end;
+  justify-content: end;
+  border:none;
+  font-family: var(--font_fam);
+  font-size: var(--font_size_xl);
+  text-transform: uppercase;
+  align-self: flex-end;
+  min-height: var(--min_height_sections_forms);
+  overflow: hidden;
+  width: 100%;
+  gap: 1rem;
+  cursor: pointer;
+  color: var(--aev_darkgrey);
+}
+
+.std-btn p {
+  line-height: calc(var(--line_height_sections_forms) + 0.1);
+}
+
+.rotate {
+  rotate: 90deg;
+  transition: var(--main_transition);
+}
+.no-rotate {
+  rotate: 0deg;
+  transition: var(--main_transition);
+}
+
+@media (max-width:1200px) {
+  .std-btn {
+    font-size: var(--font_size_xl_mob);
+  }
+}
+
+@media (max-width:600px) {
+  .std-btn {
+    text-align: end;
+    line-height: 2rem;
+  }
+}

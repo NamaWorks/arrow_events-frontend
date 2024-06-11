@@ -1,0 +1,38 @@
+.icon-div {
+  width: var(--icon_div_width);
+  display: flex;
+  align-self: center;
+  position: relative;
+  /* transition: var(--main_transition); */
+  /* cursor: pointer; */
+}
+
+.displaced{
+  /* background-color: blueviolet; */
+  width: var(--icon_div_width);
+  display: flex;
+  align-self: center;
+  position: relative;
+  top: var(--icon_div_position_top);
+}
+
+.rotate {
+  rotate: 90deg;
+  transition: var(--main_transition);
+}
+.no-rotate {
+  rotate: 0deg;
+  transition: var(--main_transition);
+}
+
+.icon{
+  width: 100%;
+}
+
+@media (max-width:1200px) {
+
+.icon-div{
+  width: var(--icon_div_width_mob);
+}
+
+}

@@ -1,0 +1,126 @@
+.user-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  overflow: scroll;
+}
+
+ .user-image-div{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: end;
+  min-width: var(--user_section_image_width);
+  min-height: var(--user_section_image_width);
+  width: var(--user_section_image_width);
+  height: var(--user_section_image_width);
+  overflow: hidden;
+  border-radius: 100%;
+  border: 3px solid var(--aev_lightgrey);
+  margin: var(--sections_divs_padding_left);
+}
+
+.user-image-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.change-section-btn {
+  text-transform: uppercase;
+  font-size: var(--font_size_m);
+  align-self: end;
+  width: var(--user_section_image_width);
+  border: none;
+  background-color: var(--aev_lightgrey);
+  color: var(--aev_darkgrey);
+  margin: 0  var(--sections_divs_padding_left) var(--sections_divs_padding_left);
+  padding: 0.5rem ;
+  cursor: pointer;
+}
+
+h4{
+  font-size: var(--font_size_xl);
+  font-weight: var(--font_weight_m);
+  text-transform: none;
+}
+
+#user-username {
+  background-color: var(--aev_lightgrey);
+}
+
+#user-email {
+  background-color: var(--aev_lightblue);
+}
+
+.list-toggle {
+  display: flex;
+  gap: 1rem;
+}
+
+.list-toggle img {
+  cursor: pointer;
+  z-index: 1;
+  rotate: 0deg;
+}
+.rotate {
+  rotate: 90deg;
+  transition: var(--main_transition);
+}
+.no-rotate {
+  rotate: 0deg;
+  transition: var(--main_transition);
+}
+
+#attending-events-toggle {
+  background-color: var(--aev_red) ;
+}
+
+#attending-events-toggle h4{
+  text-transform: uppercase
+}
+
+#attending-events-div{
+  width: 75svw;
+  align-items: start;
+  display: flex;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+  max-height: 150px;
+  height: 0px;
+  transition: var(--main_transition);
+  overflow: hidden;
+  position: relative;
+  right:  var(--sections_divs_padding_left);
+  padding-left: 25svw  ;
+}
+
+#attending-events-div p {
+  font-size: var(--font_size_l);
+}
+
+#attending-events-div p::before {
+  content: "—";
+  color: var(--aev_red);
+}
+
+#attending-events-div.visible {
+  overflow: scroll;
+  height: 150px;
+}
+
+@media (max-width:1200px) {
+  h4{
+    font-size: var(--font_size_xl_mob);
+  }
+}
+
+@media (max-width:450px) {
+  .user-image-div{
+    min-width: 150px;
+    min-height: 150px;
+    width: 150px;
+    height: 150px;
+  }
+  
+}

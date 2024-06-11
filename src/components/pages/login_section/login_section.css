@@ -1,0 +1,19 @@
+#login_section {
+  display: flex;
+}
+
+#submit-login-btn {
+  background-color: var(--aev_lightblue);
+}
+
+#login-password-div {
+  background-color: var(--aev_orange);
+}
+
+#login-username-div {
+  background-color: var(--aev_purple);
+}
+
+#login-title-div{
+  background-color: var(--aev_yellow);
+}

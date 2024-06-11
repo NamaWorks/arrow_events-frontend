@@ -1,0 +1,35 @@
+#signup_section {
+  display: flex;
+}
+
+#submit-signup-btn {
+  background-color: var(--aev_white);
+}
+
+#signup-image-input {
+  background-color: var(--aev_yellow);
+}
+
+#signup-image-input label {
+  cursor: pointer;
+}
+
+#pfp-input {
+  display: none;
+}
+
+#signup-password-div {
+  background-color: var(--aev_lightblue);
+}
+
+#signup-username-div {
+  background-color: var(--aev_orange);
+}
+
+#signup-email-div{
+  background-color: var(--aev_aquagreen);
+}
+
+#signup-title-div{
+  background-color: var(--aev_lightgrey);
+}
