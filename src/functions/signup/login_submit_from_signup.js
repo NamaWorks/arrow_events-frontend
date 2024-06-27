@@ -4,9 +4,9 @@ import { printEvents } from "../../components/pages/events_section/events_sectio
 import { api } from "../../data/global_variables"
 import { outroAnimation } from "../sections/intro_animation"
 
- export const loginSubmit = async () => {
-  const username = document.querySelector("#login-username-input").value
-  const password = document.querySelector("#login-password-input").value
+ export const loginSubmitFromSignUp = async () => {
+  const username = document.querySelector("#signup-username-input").value;
+  const password = document.querySelector("#signup-password-input").value;
   console.log(username + password)
   const data = await fetch(api+"users/login", {
     headers: {
@@ -28,11 +28,10 @@ import { outroAnimation } from "../sections/intro_animation"
     printPopup("welcome " + username + "!", "green")
     // alert(`welcome ${username}`)
   
-    const loginSection = document.querySelector("#login_section")
-    console.log(loginSection)
-    outroAnimation(loginSection)
+    const signupSection = document.querySelector("#signup_section")
+    outroAnimation(signupSection)
     setTimeout(() => {
-      loginSection.remove()
+    signupSection.remove()
       printNavbar()
       printEvents()
     }, 400);

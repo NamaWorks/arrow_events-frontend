@@ -6,9 +6,12 @@ import { clearSections } from "../../../functions/sections/clear_sections"
 import { signupSubmit } from "../../../functions/signup/signup_submit"
 import { printBrand } from "../../elements/brand/at-events"
 import { introAnimation } from "../../../functions/sections/intro_animation"
+import { printPopup } from "../../elements/popups/popups"
+import { loginSubmitFromSignUp } from "../../../functions/signup/login_submit_from_signup"
 
 export const printSignup = () => {
   clearSections()
+  sessionStorage.setItem("currentPage", "signup")
   const signupSection = document.createElement("section")
   signupSection.setAttribute("id", "signup_section")
   signupSection.style.top = "100svh"
@@ -39,13 +42,18 @@ export const printSignup = () => {
   formElement.append(pfpDiv)
   const pfpLabel = document.createElement("label")
   pfpLabel.setAttribute("for", "pfp-input")
-  pfpLabel.innerText = "profile picture"
+  // pfpLabel.innerText = "profile picture"
+  pfpLabel.innerHTML = "profile picture <span class='pfp-note'>click to add</span>"
   pfpDiv.append(pfpLabel)
   const pfpInput = document.createElement("input")
   pfpInput.setAttribute("id", "pfp-input")
   pfpInput.setAttribute("type", "file")  
   pfpInput.setAttribute("accept", "image/png, image/jpg")
   pfpDiv.append(pfpInput)
+
+  pfpInput.addEventListener("change", ()=>{ pfpInput.value ? pfpLabel.innerHTML = "profile picture <span class='pfp-note'>already added</span>" : pfpLabel.innerHTML = "profile picture <span class='pfp-note'>click to add</span>"})
+  
+
 
   const usernameDiv = document.createElement("div")
   usernameDiv.classList.add("form-div")
@@ -95,9 +103,12 @@ export const printSignup = () => {
   const submitSignupBtn = document.createElement("button")
   submitSignupBtn.classList.add("submit-btn")
   submitSignupBtn.setAttribute("id", "submit-signup-btn")
-  submitSignupBtn.addEventListener("click", (e) => {
+  submitSignupBtn.addEventListener("click", async (e) => {
     e.preventDefault()
-    signupSubmit()
+    printPopup("Signup submited, wait a second", "yellow")
+    let signupStatus = await signupSubmit()
+    console.log(signupStatus)
+    signupStatus = 201 ? loginSubmitFromSignUp() : console.log(`something went wrong`)
   })
   formElement.append(submitSignupBtn)
   const submitSignupBtnText = document.createElement("p")

@@ -6,6 +6,7 @@ import { clearSections } from "../../../functions/sections/clear_sections"
 import { printBrand } from "../../elements/brand/at-events"
 import { printIcon } from "../../elements/brand/icons"
 import { introAnimation } from "../../../functions/sections/intro_animation"
+import { printPopup } from "../../elements/popups/popups"
 
 export const printCreateEventSection = () => {
   
@@ -16,6 +17,8 @@ export const printCreateEventSection = () => {
     app.append(createEventSection)
     printBrand()
   }, 400);
+
+  sessionStorage.setItem("currentPage", "create-event")
 
 
   const createEventTitleDiv = document.createElement("div")
@@ -107,13 +110,35 @@ export const printCreateEventSection = () => {
   eventCapacityInput.setAttribute("placeholder", "capacity")
   eventCapacityDiv.append(eventCapacityInput)
 
+  const eventColorDiv = document.createElement("div")
+  eventColorDiv.classList.add("create-event-form-div")
+  eventColorDiv.classList.add("form-div")
+  eventColorDiv.setAttribute("id", "create-event-color-div")
+  formElement.append(eventColorDiv)
+  const colorLabel = document.createElement("label")
+  colorLabel.setAttribute("for", "event-color-input")
+  colorLabel.innerText = "color"
+  eventColorDiv.append(colorLabel)
+  const eventColorInput = document.createElement("select")
+  // eventColorInput.setAttribute("type", "select")
+  eventColorInput.setAttribute("id", "event-color-input")
+  eventColorDiv.append(eventColorInput)
+  const colors = ["red", "yellow", "orange", "purple", "lightblue", "aquagreen", "white"]
+  colors.forEach(color => {
+    const eventColorInputOpt = document.createElement("option")    
+    eventColorInputOpt.setAttribute("value", color)
+    eventColorInputOpt.innerText = color
+    eventColorInput.append(eventColorInputOpt)
+  });
+
   const submitEventBtn = document.createElement("button")
   submitEventBtn.setAttribute("id", "submit-event-btn")
   submitEventBtn.classList.add("submit-btn")
   formElement.append(submitEventBtn)
   submitEventBtn.addEventListener("click", async (e)=> {
     e.preventDefault()
-    await createEventSubmit()
+    printPopup("Event submited, wait a second", "yellow")
+      await createEventSubmit()
   })
   const submitEventBtnText = document.createElement("p")
   submitEventBtnText.setAttribute("id", "submit-event-btn-text")

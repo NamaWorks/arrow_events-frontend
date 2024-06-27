@@ -27,3 +27,7 @@
 .red {
 background-color: var(--aev_red);
 }
+
+.yellow {
+  background-color: var(--aev_yellow);
+}

@@ -26,6 +26,7 @@ article {
   /* font-size: var(--font_size_l); */
   font-weight: var(--font_weight_m);
   /* margin: 0  0 var(--event_margins) ; */
+  cursor: pointer;
 }
 
 /* .event-title .position-start {

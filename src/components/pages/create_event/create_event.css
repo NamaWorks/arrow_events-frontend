@@ -43,6 +43,10 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-color: var(--aev_purple);
 }
 
+#create-event-color-div {
+  background-color: var(--aev_lightgrey);
+}
+
 #submit-event-btn {
   background-color: var(--aev_white);
 }

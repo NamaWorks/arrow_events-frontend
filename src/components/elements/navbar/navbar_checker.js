@@ -28,15 +28,23 @@ export const checkNavbar = () => {
 
   if(document.getElementById("signup")) {document.getElementById("signup").addEventListener("click", function (){
     const currentSection = document.querySelector("section")
-outroAnimation(currentSection)
+    outroAnimation(currentSection)
     printSignup()
   })}
 
-  if(document.getElementById("events")) {document.getElementById("events").addEventListener("click", function (){
-    const currentSection = document.querySelector("section")
-outroAnimation(currentSection)
-    printEvents()
-  })}
+  if(document.getElementById("events")) {
+
+    document.getElementById("events").addEventListener("click", function (){
+      const currentSection = sessionStorage.getItem("currentPage")
+      if(!(currentSection == "events")){
+        const currentSection = document.querySelector("section")
+        outroAnimation(currentSection)
+        printEvents()
+      }
+  })
+}
+
+
 
   if(document.getElementById("login")) {document.getElementById("login").addEventListener("click", function (){
     const currentSection = document.querySelector("section")

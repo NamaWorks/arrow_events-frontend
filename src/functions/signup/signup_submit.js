@@ -27,14 +27,16 @@ export const signupSubmit = async () => {
 
   if(data.status == 201){
     printPopup("signed up succesfully", "green")
-    const currentSection = document.querySelector("section")
-    outroAnimation(currentSection)
-    setTimeout(() => {
-    currentSection.remove()
-      printLogin()
-    }, 400);
+    // const currentSection = document.querySelector("section")
+    // outroAnimation(currentSection)
+    // setTimeout(() => {
+    // currentSection.remove()
+    //   printLogin()
+    // }, 400);
+    return data.status
   } else { 
     printPopup("error at signup", "red")
+    return data.status
     // alert(`error at signup`) 
   }
   

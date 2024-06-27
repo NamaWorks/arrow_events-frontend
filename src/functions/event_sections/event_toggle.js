@@ -1,7 +1,9 @@
-export function eventToggle (btnElement) {
-  const event = btnElement.parentElement.parentElement
+export function eventToggle (titleDiv) {
+  const event = titleDiv.parentElement
   event.classList.toggle("event-seen")
   const eventInfo = event.querySelector(".event-info")
+
+  const btnElement = titleDiv.querySelector(".icon-div")
 
   btnElement.classList.toggle("rotate")
   btnElement.classList.toggle("no-rotate")
