@@ -11,7 +11,7 @@ import { introAnimation, outroAnimation } from "../../../functions/sections/intr
 
 export const printLogedUserSection = async () => {
   clearSections()
-  sessionStorage("currentPage", "user")
+  sessionStorage.setItem("currentPage", "user")
   const user = localStorage.getItem("user")
 
   const userJson = JSON.parse(user)

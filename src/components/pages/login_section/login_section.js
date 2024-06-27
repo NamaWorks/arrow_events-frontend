@@ -9,7 +9,7 @@ import { introAnimation } from "../../../functions/sections/intro_animation";
 
 export const printLogin = () => {
   clearSections()
-  sessionStorage("currentPage", "login")
+  sessionStorage.setItem("currentPage", "login")
   const loginSection = document.createElement("section")
   loginSection.setAttribute("id", "login_section")
   loginSection.style.top = "100svh"
