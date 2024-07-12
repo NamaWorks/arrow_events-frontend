@@ -14,6 +14,7 @@ import { eventToggle } from "../../../functions/event_sections/event_toggle";
 import { printBrand } from "../../elements/brand/at-events";
 import { setRandomColorClass } from "../../../functions/event_sections/assign_random_color";
 import { introAnimation } from "../../../functions/sections/intro_animation";
+import { createStdBtn } from "../../elements/buttons/std_buttons";
 
 
 export const printEvents = async () => {
@@ -60,12 +61,10 @@ export const printEvents = async () => {
     }
     
     for (const event of events) {
-      // console.log(event.title)
       const article = document.createElement("article")
       article.classList.add("event")
     eventsSection.append(article)
 
-    // setRandomColorClass(article)
 
     // -------------------------------------------;-
 
@@ -88,7 +87,6 @@ export const printEvents = async () => {
 
     arrow.classList.add("no-rotate")
     arrow.classList.add("position-start")
-    // arrow.addEventListener("click", function (e) {eventToggle(this)})
 
     // --------------------------------------------
 
@@ -131,13 +129,10 @@ export const printEvents = async () => {
     const arrowAttendants =  printIcon("https://res.cloudinary.com/dgrhbsilh/image/upload/v1716960281/14_RTC_P10_be-to-fe-js/icons/arrow_hfuzjx.png")
     eventAttendantsClickDiv.append(arrowAttendants)
     arrowAttendants.classList.add("no-rotate")
-    // arrowAttendants.addEventListener("click", function (e) {
-    //   attendantToggle(this)
-    // })
 
     const attendantsListUl = document.createElement("ul")
     attendantsListUl.classList.add("attendants-list")
-    // attendantsListUl.style.height = "0px"
+
     eventAttendantsDiv.append(attendantsListUl)
 ;
     // --------------------------------------------
@@ -149,9 +144,6 @@ export const printEvents = async () => {
       const attendantUsername = document.createElement("p")
       attendantUsername.innerText = attendant.username
       attendantLi.append(attendantUsername)
-      // const attendantEmail = document.createElement("p")
-      // attendantEmail.innerText = attendant.email
-      // attendantLi.append(attendantEmail)
     });
 
     // ---------------------------------------------
@@ -165,19 +157,25 @@ export const printEvents = async () => {
       const eventAttendantsByName = eventAttendants.map(e => e.username)
       
       if(!eventAttendantsByName.includes(userResponse.username)){
-        const confirmAssistanceBtn = document.createElement("button")
-        confirmAssistanceBtn.innerText = "confirm assistance"
-        confirmAssistanceBtn.classList.add("confirm-assistance-btn")
+        // const confirmAssistanceBtn = document.createElement("button")
+        // confirmAssistanceBtn.innerText = "confirm assistance"
+        // confirmAssistanceBtn.classList.add("confirm-assistance-btn")
+        // confirmAssistanceBtn.addEventListener("click", function (e) {confirmAssistance(this)})
+        // eventInfoDiv.append(confirmAssistanceBtn)
+        // confirmAssistanceBtn.classList.add("std-btn")
+        const confirmAssistanceBtn = createStdBtn(eventInfoDiv, "confirm assistance", "confirm-assistance-btn")
         confirmAssistanceBtn.addEventListener("click", function (e) {confirmAssistance(this)})
-        eventInfoDiv.append(confirmAssistanceBtn)
-        confirmAssistanceBtn.classList.add("std-btn")
+      
       } else if(eventAttendantsByName.includes(userResponse.username)){
-        const cancelAssistanceBtn = document.createElement("button")
-        cancelAssistanceBtn.innerText = "cancel assistance"
-        cancelAssistanceBtn.classList.add("cancel-assistance-btn")
+        // const cancelAssistanceBtn = document.createElement("button")
+        // cancelAssistanceBtn.innerText = "cancel assistance"
+        // cancelAssistanceBtn.classList.add("cancel-assistance-btn")
+        // cancelAssistanceBtn.addEventListener("click", function (e) {cancelAssistance(this)})
+        // eventInfoDiv.append(cancelAssistanceBtn)
+        // cancelAssistanceBtn.classList.add("std-btn")
+        const cancelAssistanceBtn = createStdBtn(eventInfoDiv, "cancel assistance", "cancel-assistance-btn")
         cancelAssistanceBtn.addEventListener("click", function (e) {cancelAssistance(this)})
-        eventInfoDiv.append(cancelAssistanceBtn)
-        cancelAssistanceBtn.classList.add("std-btn")
+        
       }
     }
   }
