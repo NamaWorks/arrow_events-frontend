@@ -44,27 +44,6 @@ export const printCreateEventSection = () => {
 
   const eventCapacityDiv = createFormFieldNumber("create-event", "event-capacity", formElement, "capacity")
 
-  // const eventColorDiv = document.createElement("div")
-  // eventColorDiv.classList.add("create-event-form-div")
-  // eventColorDiv.classList.add("form-div")
-  // eventColorDiv.setAttribute("id", "create-event-color-div")
-  // formElement.append(eventColorDiv)
-  // const colorLabel = document.createElement("label")
-  // colorLabel.setAttribute("for", "event-color-input")
-  // colorLabel.innerText = "color"
-  // eventColorDiv.append(colorLabel)
-  // const eventColorInput = document.createElement("select")
-  // // eventColorInput.setAttribute("type", "select")
-  // eventColorInput.setAttribute("id", "event-color-input")
-  // eventColorDiv.append(eventColorInput)
-  // const colors = ["red", "yellow", "orange", "purple", "lightblue", "aquagreen", "white"]
-  // colors.forEach(color => {
-  //   const eventColorInputOpt = document.createElement("option")    
-  //   eventColorInputOpt.setAttribute("value", color)
-  //   eventColorInputOpt.innerText = color
-  //   eventColorInput.append(eventColorInputOpt)
-  // });
-
   const eventColorDiv = createFormFieldSelect("create-event", "color", formElement, ["red", "yellow", "orange", "purple", "lightblue", "aquagreen", "white"])
 
   const submitEventBtn = createFormSubmitBtn("create-event", formElement, "publish")
