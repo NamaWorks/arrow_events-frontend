@@ -120,6 +120,10 @@ select {
     bottom: 0rem;
     margin-left: 1rem;
   }
+
+  .pfp-note {
+    font-weight: 14px;
+  }
 }
 
 @media (max-width:600px) {

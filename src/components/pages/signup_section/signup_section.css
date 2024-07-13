@@ -34,11 +34,3 @@
 #signup-title-div{
   background-color: var(--aev_lightgrey);
 }
-
-.pfp-note {
-  opacity: .5;
-  color: var(--aev_darkgrey);
-  font-weight: var(--font_weight_xs);
-  text-transform: lowercase;
-  margin: 0 0 0 2rem;
-}

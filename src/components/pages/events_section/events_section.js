@@ -1,5 +1,4 @@
 import "../../elements/brand/icons.css"
-import "../../elements/buttons/std_buttons.css"
 import "./events_section.css"
 
 import { api, app } from "../../../data/global_variables";

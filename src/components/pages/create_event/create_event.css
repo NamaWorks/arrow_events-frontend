@@ -23,19 +23,19 @@ input[type="date"]::-webkit-calendar-picker-indicator {
     -webkit-appearance: none;
 }
 
-#create-event-name-div {
+#create-event-event-name-div {
   background-color: var(--aev_orange);
 }
 
-#create-event-location-div {
+#create-event-event-location-div {
   background-color: var(--aev_yellow);
 }
 
-#create-event-description-div {
+#create-event-event-description-div {
   background-color: var(--aev_aquagreen);
 }
 
-#create-event-date-div {
+#create-event-event-date-div {
   background-color: var(--aev_lightblue);
 }
 
@@ -47,7 +47,7 @@ input[type="date"]::-webkit-calendar-picker-indicator {
   background-color: var(--aev_lightgrey);
 }
 
-#submit-event-btn {
+#submit-create-event-btn {
   background-color: var(--aev_white);
 }
 
