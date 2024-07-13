@@ -15,6 +15,7 @@ import { printBrand } from "../../elements/brand/at-events";
 import { setRandomColorClass } from "../../../functions/event_sections/assign_random_color";
 import { introAnimation } from "../../../functions/sections/intro_animation";
 import { createStdBtn } from "../../elements/buttons/std_buttons";
+import { allEventsFilter } from "../../../functions/event_sections/all_events_filter";
 
 
 export const printEvents = async () => {
@@ -41,23 +42,22 @@ export const printEvents = async () => {
     
     
     if(logedUser) {
-      const attendingEventsbtn = document.createElement("button")
-      attendingEventsbtn.innerText = "attending events"
-      attendingEventsbtn.classList.add("std-btn")
-      attendingEventsbtn.addEventListener("click", async () => {
-        // await printEvents()
-        filterAttendingEvents(logedUser.user.username)
-      })
-      eventsSection.append(attendingEventsbtn)
+      const allEventsBtn = createStdBtn(eventsSection, "all events", "all-events-btn")
+      allEventsBtn.addEventListener("click", async () => {allEventsFilter(logedUser.user.username)})
+  
+      // const attendingEventsbtn = document.createElement("button")
+      // attendingEventsbtn.innerText = "attending events"
+      // attendingEventsbtn.classList.add("std-btn")
+      // eventsSection.append(attendingEventsbtn)
+      const attendingEventsBtn = createStdBtn(eventsSection, "attending events", "attending-events-btn")
+      attendingEventsBtn.addEventListener("click", async () => { filterAttendingEvents(logedUser.user.username)})
       
-      const notAttendingEventsbtn = document.createElement("button")
-      notAttendingEventsbtn.innerText = "non attending events"
-      notAttendingEventsbtn.classList.add("std-btn")
-      notAttendingEventsbtn.addEventListener("click", async () => {
-        // await printEvents()
-        filterNonAttendingEvents(logedUser.user.username)
-      })
-      eventsSection.append(notAttendingEventsbtn)
+      // const notAttendingEventsbtn = document.createElement("button")
+      // notAttendingEventsbtn.innerText = "non attending events"
+      // notAttendingEventsbtn.classList.add("std-btn")
+      // eventsSection.append(notAttendingEventsbtn)
+      const notAttendingEventsbtn = createStdBtn(eventsSection, "non attending events", "non-attending-events-btn")
+      notAttendingEventsbtn.addEventListener("click", async () => {filterNonAttendingEvents(logedUser.user.username)})
     }
     
     for (const event of events) {
@@ -155,6 +155,7 @@ export const printEvents = async () => {
       const userResponse = await user.json()
       
       const eventAttendantsByName = eventAttendants.map(e => e.username)
+
       
       if(!eventAttendantsByName.includes(userResponse.username)){
         // const confirmAssistanceBtn = document.createElement("button")
