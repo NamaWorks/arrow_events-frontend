@@ -128,7 +128,7 @@ article button {
 }
 
 
-@media (max-width:1200px) {
+@media (max-width:1300px) {
 
   .event-title {
     font-size: var(--font_size_xl_mob);

@@ -28,7 +28,7 @@
   transition: var(--main_transition);
 }
 
-@media (max-width:1200px) {
+@media (max-width:1300px) {
   .std-btn {
     font-size: var(--font_size_xl_mob);
   }

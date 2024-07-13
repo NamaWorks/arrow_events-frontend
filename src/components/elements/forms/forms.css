@@ -100,7 +100,7 @@ select {
   margin: 0 0 0 2rem;
 }
 
-@media (max-width:1200px) {
+@media (max-width:1300px) {
   
   .submit-btn {
     font-size: var(--font_size_xl_mob);
@@ -114,6 +114,12 @@ select {
   .form-div label, .form-title{
     font-size: var(--font_size_xl_mob);
   }
+
+  select {
+    font-size: 14px;
+    bottom: 0rem;
+    margin-left: 1rem;
+  }
 }
 
 @media (max-width:600px) {
@@ -122,5 +128,11 @@ select {
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
+  }
+  
+  select {
+    font-size: 14px;
+    bottom: 0rem;
+    margin-left: 0.5rem;
   }
 }

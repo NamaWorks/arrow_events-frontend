@@ -109,7 +109,7 @@ h4{
   height: 150px;
 }
 
-@media (max-width:1200px) {
+@media (max-width:1300px) {
   h4{
     font-size: var(--font_size_xl_mob);
   }
