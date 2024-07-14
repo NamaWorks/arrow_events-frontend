@@ -1,8 +1,8 @@
 # @EVENTS 
 
-@Events is a event organization service, based on user event creation and attendants listing.
+@Events is an event organization service, based on user event creation and attendants listing.
 
-![alt text](<src/assets/documentation/Group 39602.jpg>)
+![alt text](<src/assets/documentation/mockup_laptop 1.png>)
 
 ![alt text](<src/assets/documentation/Frame 103.jpg>)
 
