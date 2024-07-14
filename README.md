@@ -1,13 +1,32 @@
 # @EVENTS 
+![alt text](<src/assets/documentation/mockup_laptop 1.png>)
 
 @Events is an event organization service, based on user event creation and attendants listing.
 
-![alt text](<src/assets/documentation/mockup_laptop 1.png>)
+## Main features:
+- Login and Authentication
+- Image upload
+- Edit profile options
+- Event Creation
 
+## Screen captures
+
+### Login
 ![alt text](<src/assets/documentation/Frame 103.jpg>)
 
+### Events section
+![alt text](<src/assets/documentation/events section.png>)
+
+### Create event
+![alt text](src/assets/documentation/create_event.png)
+
+### User Page
+![alt text](src/assets/documentation/user_page.png)
+
+### Responsive
 ![alt text](<src/assets/documentation/Frame 104.jpg>)
-Developed using:
+
+## Developed using:
 <div >
 	<img width="36" src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" alt="HTML" title="HTML"/>
 	<img width="36" src="https://user-images.githubusercontent.com/25181517/183898674-75a4a1b1-f960-4ea9-abcb-637170a00a75.png" alt="CSS" title="CSS"/>
