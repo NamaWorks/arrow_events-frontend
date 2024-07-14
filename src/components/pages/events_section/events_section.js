@@ -43,18 +43,10 @@ export const printEvents = async () => {
     if(logedUser) {
       const allEventsBtn = createStdBtn(eventsSection, "all events", "all-events-btn")
       allEventsBtn.addEventListener("click", async () => {allEventsFilter(logedUser.user.username)})
-  
-      // const attendingEventsbtn = document.createElement("button")
-      // attendingEventsbtn.innerText = "attending events"
-      // attendingEventsbtn.classList.add("std-btn")
-      // eventsSection.append(attendingEventsbtn)
+
       const attendingEventsBtn = createStdBtn(eventsSection, "attending events", "attending-events-btn")
       attendingEventsBtn.addEventListener("click", async () => { filterAttendingEvents(logedUser.user.username)})
-      
-      // const notAttendingEventsbtn = document.createElement("button")
-      // notAttendingEventsbtn.innerText = "non attending events"
-      // notAttendingEventsbtn.classList.add("std-btn")
-      // eventsSection.append(notAttendingEventsbtn)
+
       const notAttendingEventsbtn = createStdBtn(eventsSection, "non attending events", "non-attending-events-btn")
       notAttendingEventsbtn.addEventListener("click", async () => {filterNonAttendingEvents(logedUser.user.username)})
     }
@@ -157,22 +149,10 @@ export const printEvents = async () => {
 
       
       if(!eventAttendantsByName.includes(userResponse.username)){
-        // const confirmAssistanceBtn = document.createElement("button")
-        // confirmAssistanceBtn.innerText = "confirm assistance"
-        // confirmAssistanceBtn.classList.add("confirm-assistance-btn")
-        // confirmAssistanceBtn.addEventListener("click", function (e) {confirmAssistance(this)})
-        // eventInfoDiv.append(confirmAssistanceBtn)
-        // confirmAssistanceBtn.classList.add("std-btn")
         const confirmAssistanceBtn = createStdBtn(eventInfoDiv, "confirm assistance", "confirm-assistance-btn")
         confirmAssistanceBtn.addEventListener("click", function (e) {confirmAssistance(this)})
       
       } else if(eventAttendantsByName.includes(userResponse.username)){
-        // const cancelAssistanceBtn = document.createElement("button")
-        // cancelAssistanceBtn.innerText = "cancel assistance"
-        // cancelAssistanceBtn.classList.add("cancel-assistance-btn")
-        // cancelAssistanceBtn.addEventListener("click", function (e) {cancelAssistance(this)})
-        // eventInfoDiv.append(cancelAssistanceBtn)
-        // cancelAssistanceBtn.classList.add("std-btn")
         const cancelAssistanceBtn = createStdBtn(eventInfoDiv, "cancel assistance", "cancel-assistance-btn")
         cancelAssistanceBtn.addEventListener("click", function (e) {cancelAssistance(this)})
         
